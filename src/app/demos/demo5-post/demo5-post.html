@@ -1,0 +1,10 @@
+<h1>POST cu body</h1>
+<input #first placeholder="Prenume" [value]="firstName()" (input)="firstName.set(first.value)" />
+<input #mail placeholder="Email" [value]="email()" (input)="email.set(mail.value)" />
+<button (click)="create()">Creează</button>
+<p>{{ message() }}</p>
+<p class="hint">
+  Al doilea argument din post e body-ul: un obiect, pe care HttpClient îl trimite singur ca JSON. Cu
+  observe: 'response' primești tot răspunsul, deci și status-ul (201). Încearcă: prenume gol (400),
+  același email de două ori (409).
+</p>

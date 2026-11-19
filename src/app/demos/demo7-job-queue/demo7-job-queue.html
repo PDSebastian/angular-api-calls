@@ -1,0 +1,13 @@
+<h1>Un răspuns care vine mai târziu</h1>
+<button (click)="send()">Trimite un job</button>
+@if (jobId() !== '') {
+  <p>Job trimis: {{ jobId() }}</p>
+  <button (click)="check()">Verifică statusul</button>
+}
+@if (job(); as current) {
+  <p>Status: {{ statusText[current.status] }}</p>
+}
+<p class="hint">
+  POST nu așteaptă să termine treaba: îți dă doar un id. Tu întrebi apoi, cu GET, „e gata?”. Apasă
+  „Verifică” imediat și după 2 secunde.
+</p>

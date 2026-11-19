@@ -1,0 +1,10 @@
+<h1>ngOnInit la pornire</h1>
+<ul>
+  @for (user of users(); track user.id) {
+    <li>{{ user.firstName }} {{ user.lastName }}, {{ user.age }} ani</li>
+  }
+</ul>
+<p class="hint">
+  ngOnInit rulează o singură dată, după ce componenta a apărut pe ecran: aici pornești cererea fără
+  click. Deschide consola: „cerere trimisă” apare o singură dată, la fiecare intrare în demo.
+</p>

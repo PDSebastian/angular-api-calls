@@ -1,0 +1,14 @@
+<h1>PATCH și DELETE</h1>
+<ul>
+  @for (user of users(); track user.id) {
+    <li>
+      {{ user.firstName }} {{ user.lastName }}, {{ user.age }} ani
+      <button (click)="older(user)">+1 an</button>
+      <button (click)="remove(user.id)">Șterge</button>
+    </li>
+  }
+</ul>
+<p class="hint">
+  PATCH trimite doar câmpul schimbat. Serverul întoarce userul actualizat și îl pui în listă cu map;
+  la DELETE îl scoți cu filter. Reîncarcă pagina: schimbările au rămas în baza de date.
+</p>

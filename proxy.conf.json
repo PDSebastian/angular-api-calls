@@ -1,0 +1,30 @@
+{
+  "/users-api": {
+    "target": "http://localhost:8111",
+    "secure": false,
+    "pathRewrite": {
+      "^/users-api": ""
+    }
+  },
+  "/jobs-api": {
+    "target": "http://localhost:8107",
+    "secure": false,
+    "pathRewrite": {
+      "^/jobs-api": ""
+    }
+  },
+  "/shop-api": {
+    "target": "http://localhost:8104",
+    "secure": false,
+    "pathRewrite": {
+      "^/shop-api": ""
+    }
+  },
+  "/school-api": {
+    "target": "http://localhost:8105",
+    "secure": false,
+    "pathRewrite": {
+      "^/school-api": ""
+    }
+  }
+}

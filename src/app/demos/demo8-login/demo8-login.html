@@ -1,0 +1,9 @@
+<h1>Login + token</h1>
+<button (click)="products()">Produse</button>
+<button (click)="login()">Login</button>
+<p>Token: {{ token() === '' ? 'niciunul' : token().slice(0, 20) + '...' }}</p>
+<p>Răspuns la produse: {{ result() }}</p>
+<p class="hint">
+  Fără token serverul răspunde 401. Login-ul e tot un POST: primești un token și îl păstrezi într-un
+  signal. La fiecare cerere îl trimiți în header-ul Authorization, după cuvântul Bearer.
+</p>

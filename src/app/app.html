@@ -1,0 +1,17 @@
+<div class="app">
+  <nav class="menu">
+    @for (section of sections; track section.title) {
+      <div>
+        <h2>{{ section.title }}</h2>
+        @for (page of section.pages; track page.title) {
+          <button [class.active]="page === selected()" (click)="selected.set(page)">
+            {{ page.title }}
+          </button>
+        }
+      </div>
+    }
+  </nav>
+  <main class="content">
+    <ng-container *ngComponentOutlet="selected().component" />
+  </main>
+</div>

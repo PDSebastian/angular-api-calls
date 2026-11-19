@@ -1,0 +1,12 @@
+<h1>Parametri în URL</h1>
+<input #box type="number" [value]="age()" (input)="age.set(box.valueAsNumber)" />
+<button (click)="search()">Mai în vârstă decât {{ age() }}</button>
+<ul>
+  @for (user of users(); track user.id) {
+    <li>{{ user.firstName }} {{ user.lastName }}, {{ user.age }} ani</li>
+  }
+</ul>
+<p class="hint">
+  Obiectul params devine parte din URL: nume=valoare după „?”. Mai mulți se pun în același obiect și
+  angular îi leagă cu „&amp;”: params cu minAge și maxAge dă /between-ages?minAge=18&amp;maxAge=30.
+</p>

@@ -1,0 +1,12 @@
+<h1>HttpClient la click</h1>
+<button (click)="load()">Încarcă utilizatorii</button>
+<p>Am primit {{ users().length }} utilizatori.</p>
+<ul>
+  @for (user of users(); track user.id) {
+    <li>{{ user.firstName }} {{ user.lastName }}</li>
+  }
+</ul>
+<p class="hint">
+  http.get pregătește cererea, dar abia subscribe o trimite. În next primești corpul răspunsului,
+  deja transformat în obiecte. Abia users.set(data) redesenează lista.
+</p>
