@@ -1,1 +1,5 @@
-<p>Exercițiul 1a: de rezolvat</p>
+<button type="button" (click)="loadCount()">Câți utilizatori?</button>
+
+@if (count() !== null) {
+  <p>Sunt {{ count() }} utilizatori.</p>
+}

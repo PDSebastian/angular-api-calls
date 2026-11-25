@@ -1,1 +1,10 @@
-<p>Exercițiul 3d: de rezolvat</p>
+@if (errorMessage() !== null) {
+  <p class="error">{{ errorMessage() }}</p>
+  <button type="button" (click)="load()">Reîncearcă</button>
+} @else {
+  <ul>
+    @for (user of users(); track user.id) {
+      <li>{{ user.firstName }} {{ user.lastName }}</li>
+    }
+  </ul>
+}

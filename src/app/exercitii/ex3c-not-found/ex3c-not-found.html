@@ -1,1 +1,12 @@
-<p>Exercițiul 3c: de rezolvat</p>
+<input
+  type="text"
+  [value]="email()"
+  (input)="email.set($any($event.target).value)"
+/>
+<button type="button" (click)="search()">Caută</button>
+
+@if (errorText()) {
+  <p>{{ errorText() }}</p>
+} @else if (user(); as foundUser) {
+  <p>{{ foundUser.firstName }} {{ foundUser.lastName }}</p>
+}

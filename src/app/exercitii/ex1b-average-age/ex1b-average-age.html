@@ -1,1 +1,5 @@
-<p>Exercițiul 1b: de rezolvat</p>
+<button type="button" (click)="loadAverageAge()">Vârsta medie</button>
+
+@if (averageAge() !== null) {
+  <p>Vârsta medie: {{ averageAge() }}</p>
+}

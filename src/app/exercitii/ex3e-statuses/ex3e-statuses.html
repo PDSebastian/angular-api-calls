@@ -1,1 +1,11 @@
-<p>Exercițiul 3e: de rezolvat</p>
+<button type="button" (click)="call('/users-api/api/users')">Users</button>
+<button type="button" (click)="call('/users-api/api/users/by-email?email=nimeni@mycode.ro')">
+  By email
+</button>
+<button type="button" (click)="call('/users-api/api/users/older-than?age=abc')">
+  Older than
+</button>
+
+@if (status() !== null) {
+  <p>Status: {{ status() }}</p>
+}

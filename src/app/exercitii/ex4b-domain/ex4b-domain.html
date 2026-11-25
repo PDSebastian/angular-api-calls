@@ -1,1 +1,9 @@
-<p>Exercițiul 4b: de rezolvat</p>
+<input #box type="text" [value]="domain()" (input)="domain.set(box.value)" />
+<button type="button" (click)="search()">Caută</button>
+
+<ul>
+  @for (u of users() ?? []; track u.id) {
+    <li>{{ u.email }}</li>
+  }
+</ul>
+

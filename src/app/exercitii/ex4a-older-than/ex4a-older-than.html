@@ -1,1 +1,11 @@
-<p>Exercițiul 4a: de rezolvat</p>
+<input #box type="number" [value]="age()" (input)="age.set(box.valueAsNumber)" />
+<button type="button" (click)="search()">Caută</button>
+
+@if (users(); as list) {
+  <p>Găsiți: {{ list.length }}</p>
+  <ul>
+    @for (u of list; track u.id) {
+      <li>{{ u.firstname }} {{ u.lastname }}, {{ u.age }} ani</li>
+    }
+  </ul>
+}

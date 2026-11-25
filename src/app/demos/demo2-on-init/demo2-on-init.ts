@@ -15,6 +15,7 @@ interface User {
 export class Demo2OnInit implements OnInit {
   private readonly http = inject(HttpClient);
 
+
   protected readonly users = signal<User[]>([]);
 
   ngOnInit(): void {

@@ -1,1 +1,9 @@
-<p>Exercițiul 3a: de rezolvat</p>
+@if (loading()) {
+  <p>Se încarcă...</p>
+} @else {
+  <ul>
+    @for (u of users(); track u.id) {
+      <li>{{ u.firstName }} {{ u.lastName }}</li>
+    }
+  </ul>
+}

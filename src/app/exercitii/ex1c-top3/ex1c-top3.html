@@ -1,1 +1,9 @@
-<p>Exercițiul 1c: de rezolvat</p>
+<button type="button" (click)="loadTop3Users()">Top 3</button>
+
+@if (top3Users().length > 0) {
+  <ol>
+    @for (user of top3Users(); track user.id) {
+      <li>{{ user.firstName }} {{ user.lastName }}, {{ user.age }} ani</li>
+    }
+  </ol>
+}

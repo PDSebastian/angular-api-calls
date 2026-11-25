@@ -1,1 +1,6 @@
-<p>Exercițiul 4d: de rezolvat</p>
+<input #box type="text" [value]="email()" (input)="email.set(box.value)" />
+<button type="button" (click)="check()">Verifică</button>
+
+@if (result() !== null) {
+  <p>{{ result() ? 'Există' : 'Nu există' }}</p>
+}

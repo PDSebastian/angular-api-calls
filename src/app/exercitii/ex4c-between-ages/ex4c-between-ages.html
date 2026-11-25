@@ -1,1 +1,19 @@
-<p>Exercițiul 4c: de rezolvat</p>
+<input
+  #minBox
+  type="number"
+  [value]="minAge()"
+  (input)="minAge.set(minBox.valueAsNumber)"
+/>
+<input
+  #maxBox
+  type="number"
+  [value]="maxAge()"
+  (input)="maxAge.set(maxBox.valueAsNumber)"
+/>
+<button type="button" (click)="search()">Caută</button>
+
+<ul>
+  @for (u of users() ?? []; track u.id) {
+    <li>{{ u.firstname }} {{ u.lastname }}, {{ u.age }} ani</li>
+  }
+</ul>

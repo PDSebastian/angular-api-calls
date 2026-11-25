@@ -1,1 +1,9 @@
-<p>Exercițiul 3b: de rezolvat</p>
+@if (errorMessage()) {
+  <p class="error">{{ errorMessage() }}</p>
+} @else {
+  <ul>
+    @for (user of users(); track user.id) {
+      <li>{{ user.firstName }} {{ user.lastName }}</li>
+    }
+  </ul>
+}

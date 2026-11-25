@@ -15,12 +15,19 @@ interface User {
 })
 export class Demo1HttpClick {
   private readonly http = inject(HttpClient);
+  count=signal<number>(0);
 
   protected readonly users = signal<User[]>([]);
 
+  loadCount():void  {
+    this.http.get<User[]>('/users-api/api/users').subscribe({next:(users)=>this.count.set(users.length)});
+  }
+
   protected load(): void {
     this.http.get<User[]>('/users-api/api/users').subscribe({
-      next: (data) => this.users.set(data),
+      next: (data) =>{
+        this.users.set(data);
+      },
     });
   }
 }
